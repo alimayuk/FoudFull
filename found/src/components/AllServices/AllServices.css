@@ -1,0 +1,12 @@
+.AllServices{
+    padding: 100px 5px;
+    .container{
+        .cards{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}

@@ -1,0 +1,37 @@
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    .formCard{
+        max-width: 300px;
+        height: min-content;
+        padding: 40px 55px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        background-color: var(--customWhiteSoft);
+        border-radius: 5px;
+        .cardHeader{
+            .fordHeading{
+                text-align: center;
+            }
+        }
+        .field{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            .button{
+                max-width: max-content;
+                padding: 10px 55px;
+                align-self: center;
+                background-color: var(--customDarkBlue);
+                color: white;
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
+}

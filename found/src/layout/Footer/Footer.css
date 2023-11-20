@@ -1,0 +1,87 @@
+.footer{    
+    background-color: rgb(233, 231, 231);
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 40px 5px;
+    .Copyright{
+        text-align: center;
+        color: var(--customWhiteSoft);
+        font-size: 15px;
+    }
+ .container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    .social{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        flex:2;
+        .desc{
+            font-size: 15px;
+            color: var(--customWhiteSoft);
+        }
+        .socialIcons{
+            display: flex;
+            gap: 5px;
+            .iconsLink{
+                background: var(--customGrey);
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 7px;
+                max-width: max-content;
+                border-radius: 50%;
+                font-size: 16px;
+                transition: all ease .2s;
+                &:hover{
+                    color: white;
+                    background-color: var(--customDarkBlue);
+                }
+            }
+        }
+    }
+    .about{
+        flex: 3;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        .company{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            color: var(--customWhiteSoft);
+            & h4{ color: black;}
+            .companyLinks{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+        .contactComp{
+            color: var(--customWhiteSoft);
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            & h4{ color: black;}
+            .contactDesc{
+                display: flex;
+                flex-direction: column;
+                gap:10px;
+            }
+        }
+    }
+ }
+}
+
+@media screen and (max-width:767px){
+    .footer{
+        padding: 100px 50px;
+        .container{
+            flex-direction: column;
+            gap: 50px;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.SectionAttachment{
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        width: 100%;
+        height: 100%;
+        color: white;
+        background-color: #070c59ba;
+        text-align: center;
+
+        .customBlueBtn{
+            padding: 20px 50px;
+            color: black;
+        }
+    }
+}

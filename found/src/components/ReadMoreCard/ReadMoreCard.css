@@ -1,0 +1,47 @@
+.ReadMoreCard{
+    display: flex;
+    align-items: center;
+    max-width: 350px;
+   flex-basis: 300px;
+    background-color: white;
+    padding: 30px 15px;
+    color: black;
+    gap: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    .icon{
+        font-size: 75px;
+        color: var(--customBlue);
+      
+    }
+    .textSide{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        .hText{
+            color: var(--customDarkBlue);
+            font-size: 20px;
+            font-weight: 600;
+        }
+        .desc{
+            color: var(--customWhiteSoft);
+        }
+        .moreBtn{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-weight: 600;
+        }
+    }
+    
+}
+
+@media screen and (max-width:767px){
+
+    .ReadMoreCard{
+                    .icon{
+                        display: none !important;
+                    }
+        }
+    }

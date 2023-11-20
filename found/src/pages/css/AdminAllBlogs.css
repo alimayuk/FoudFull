@@ -1,0 +1,25 @@
+.AdminAllBlogs {
+  .container {
+    padding: 50px 5px;
+    & h1{
+        text-align: center;
+    }
+    .blogsWrapper {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
+      padding: 50px 5px;
+
+      .deleteBtn{
+        color: white;
+        background-color: red;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 20px 0px;
+      }
+    }
+  }
+}

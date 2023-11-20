@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+:root{
+    --customDarkBlue: #070D59;
+    --customBlue: #29EAFD;
+    --customWhite: #FFFFFF;
+    --customWhiteSoft: #888BAF ;
+    --customGrey:#A3A3A3;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+li{
+    list-style-type: none;
+}
+
+.container{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.customBlueBtn{
+    max-width: max-content;
+    padding: 0 40px; 
+    cursor: pointer; 
+    background-color: var(--customBlue);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}

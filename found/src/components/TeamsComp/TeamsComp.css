@@ -1,0 +1,24 @@
+.TeamsComp {
+    padding: 100px 5px;
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    .Comptitle{
+        text-align: center;
+        .headSub{
+            font-size: 14px;
+            color: var(--customWhiteSoft);
+            font-weight: 600;
+        }
+    }
+
+    .cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 50px;
+    }
+  }
+}

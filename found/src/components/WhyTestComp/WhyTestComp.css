@@ -1,0 +1,82 @@
+.WhyTestComp {
+  background-color: rgb(233, 231, 231);
+  .container {
+   .Whywrapper{
+    display: flex;
+    padding: 150px 5px;
+    gap: 20px;
+    .testimonial {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        flex:1;
+        min-width: 300px;
+        position: relative;
+        .Testtitle{
+            .span {
+                color: var(--customWhiteSoft);
+                font-weight: 900;
+              }
+        }
+      .slider{
+        position: initial;
+        .sliderItem{
+            display: flex !important;
+            flex-direction: column;
+            gap: 20px;
+            height: 100%;
+            overflow: hidden;
+            .slideImg{
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+       
+        .slick-prev{
+            position: absolute;
+            left: 80% !important;
+            top: 120px;
+            z-index: 1;
+        }
+        .slick-next{
+            position: absolute;
+            left: 90% !important;
+            top: 120px;
+            z-index: 1;
+        }
+      }
+    }
+    .faq {
+        flex:1;
+        min-width: 300px;
+      .span {
+        color: var(--customWhiteSoft);
+        font-weight: 900;
+      }
+      .faq-row-wrapper {
+        background-color: transparent;
+
+        .faq-body {
+          .faq-row {
+            .row-title {
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }}
+  }
+}
+
+@media screen and (max-width:768px) {
+    .WhyTestComp{
+      .container{
+        .Whywrapper{
+          flex-wrap: wrap;
+          gap:50px;
+        }
+      }
+    }
+}
