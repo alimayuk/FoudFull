@@ -1,8 +1,7 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./BlogDetail.css";
 import LastNews from "../LastNews/LastNews";
-import { useLocation, useNavigate } from "react-router-dom";
-import { AuthContext } from "../../context/authContext";
+import { useLocation } from "react-router-dom";
 import axios from "axios";
 import moment from "moment";
 import DOMPurify from "dompurify";
@@ -10,16 +9,8 @@ import DOMPurify from "dompurify";
 const BlogDetail = () => {
   const [post, setPost] = useState({});
   const location = useLocation();
-  const navigate = useNavigate();
   const postId = location.pathname.split("/")[2];
-  const [photo, setPhoto] = useState("");
-  const { currentUser } = useContext(AuthContext);
-  useEffect(() => {
-    if (post?.photo) {
-      const photoPath = require(`../../assets/upload/${post.photo}`);
-      setPhoto(photoPath.default || photoPath);
-    }
-  }, [post]);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -46,7 +37,7 @@ const BlogDetail = () => {
               __html: DOMPurify.sanitize(post.title),
             }}
           ></h1>
-          <img className="blogImg" src={photo} alt="" />
+          <img className="blogImg" src={`/upload/${post.photo}`} alt="" />
           <div className="date">
             <span>Posted {moment(post.createdAt).fromNow()}</span> -{" "}
             <span>{post.username}</span>

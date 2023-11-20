@@ -25,7 +25,7 @@ const AdminAllBlogs = () => {
   <NewsCard
     key={post._id} 
     post={post}
-    img={require(`../assets/upload/${post?.photo}`)}
+    img={post.photo}
     htext={post.title}
     date={`${moment(post.createdAt).format("DD")} ${moment(post.createdAt).format("MM")} ${moment(post.createdAt).format("YYYY")}`}
     desc={post.litdesc}

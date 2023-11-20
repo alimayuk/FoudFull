@@ -20,7 +20,7 @@ const NewsCard = ({ img, htext, date, desc, postId,post }) => {
   // console.log(post)
   return (
     <div className="NewsCard">
-     {img && <img src={img} alt="" />}
+     {img && <img src={`/upload/${img}`} alt="" />}
       <div className="cardBody">
         <div className="CardTitle">
           <h2>

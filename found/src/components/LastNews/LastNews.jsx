@@ -32,7 +32,7 @@ const LastNews = () => {
           {lastThreePosts.map((post, i) => (
             <NewsCard
               key={i}
-              img={require(`../../assets/upload/${post?.photo}`)}
+              img={post.photo}
               htext={post.title}
               date={`${moment(post.createdAt).format("DD")} ${moment(
                 post.createdAt

@@ -28,7 +28,7 @@ const AllBlogs = () => {
         {posts.map((post,i) => (
   <NewsCard
     key={i}
-    img={require(`../../assets/upload/${post?.photo}`)}
+    img={post.photo}
     htext={post.title}
     date={`${moment(post.createdAt).format("DD")} ${moment(post.createdAt).format("MM")} ${moment(post.createdAt).format("YYYY")}`}
     desc={post.litdesc}
