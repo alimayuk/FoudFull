@@ -20,21 +20,10 @@ export const getPost = async (req, res) => {
   };
 
   export const getAllPost = async (req, res) => {
-    const username = req.query.user;
-    const catName = req.query.cat;
+
     try {
         let posts;
-        if(username){
-            posts = await PostModel.find({username});
-        }else if(catName){
-            posts = await PostModel.find({
-                categories:{
-                    $in: [catName],
-                }
-            });
-        }else{
-                posts = await PostModel.find();
-        }
+        posts = await PostModel.find();
       res.status(200).json(posts);
     } catch (err) {
       res.status(500).json(err);

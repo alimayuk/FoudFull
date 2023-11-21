@@ -25,20 +25,25 @@ const AllBlogs = () => {
           <h1>All Blogs</h1>
         </div>
         <div className="NewsBody">
-        {posts.map((post,i) => (
-  <NewsCard
-    key={i}
-    img={post.photo}
-    htext={post.title}
-    date={`${moment(post.createdAt).format("DD")} ${moment(post.createdAt).format("MM")} ${moment(post.createdAt).format("YYYY")}`}
-    desc={post.litdesc}
-    postId={post._id}
-  />
-))}
+          {posts.length > 0 ? (
+            posts.map((post, i) => (
+              <NewsCard
+                key={i}
+                img={post.photo}
+                htext={post.title}
+                date={`${moment(post.createdAt).format("DD")} ${moment(post.createdAt).format("MM")} ${moment(post.createdAt).format("YYYY")}`}
+                desc={post.litdesc}
+                postId={post._id}
+              />
+            ))
+          ) : (
+            <p>Henüz bir blog gönderisi bulunmamaktadır.</p>
+          )}
         </div>
       </div>
     </div>
-  )
+  );
+  
 }
 
 export default AllBlogs
